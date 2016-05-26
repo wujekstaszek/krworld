@@ -1,0 +1,11 @@
+<div class="jumbotron">
+  <p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @pin.description %>
+</p>
+
+<%= link_to 'Edytuj', edit_pin_path(@pin) %> |
+<%= link_to 'Cofnij', pins_path %>
+</div>

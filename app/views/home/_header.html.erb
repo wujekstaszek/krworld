@@ -20,7 +20,16 @@
       </ul>
       <ul class="nav navbar-right">
             <li><%= link_to "Strona Główna", root_path, class:"btn btn-primary "%></li>
-        <li><%= link_to "Omnie", home_omnie_path, class:"btn btn-success " %></li>
+        <li><%= link_to "O mnie", home_omnie_path, class:"btn btn-success " %></li>
+        
+        <% if user_signed_in? %>
+          <li><%= link_to "Edycja profilu", edit_user_registration_path, class:"btn btn-default"%></li>  
+          <li> <%= link_to "Wylogowanie", destroy_user_session_path, class: "btn btn-default", method: :delete %> </li>
+        <% else %>
+          <li><%= link_to "Logowanie", new_user_session_path, class:"btn btn-default"%></li>  
+          <li> <%= link_to "Rejestracja", new_user_registration_path, class: "btn btn-default"%> </li>
+        <% end %>
+        
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
