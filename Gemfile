@@ -9,6 +9,9 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
+gem 'paperclip', '~> 4.3'
+gem 'jquery-turbolinks'
+gem 'masonry-rails', '~> 0.2.4'
 gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   gem 'byebug'
@@ -27,3 +30,4 @@ group :production do
   gem "pg", "0.18.2"
   gem "rails_12factor", "0.0.3"
 end
+
